@@ -13,8 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Definitions">
+      <UniqueIdentifier>{b12208d1-c8a0-4628-8e20-1b1089954d5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Linked List">
+      <UniqueIdentifier>{67fd137f-ee2f-44b4-9667-fb1e0409c2f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Linked List">
+      <UniqueIdentifier>{5fc30895-c849-4b8d-acf6-75c73fe3286c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common_definitios.h">
+      <Filter>Header Files\Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="data_structures_status.h">
+      <Filter>Header Files\Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>Header Files\Linked List</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedListEntry.h">
+      <Filter>Header Files\Linked List</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LinkedList.c">
+      <Filter>Source Files\Linked List</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
