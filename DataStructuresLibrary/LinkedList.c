@@ -8,6 +8,7 @@ LinkedListInitialize(
 {
     LinkedList->Base.Flink = &LinkedList->Base;
     LinkedList->Base.Blink = &LinkedList->Base;
+    LinkedList->Size = 0;
 }
 
 _Use_decl_annotations_
@@ -27,6 +28,8 @@ LinkedListInsertTail(
 
     LinkedList->Base.Blink->Flink = Entry;
     LinkedList->Base.Blink = Entry;
+    
+    LinkedList->Size++;
 
     return EXIT_STATUS_SUCCES;
 }
@@ -48,6 +51,8 @@ LinkedListInsertHead(
 
     LinkedList->Base.Flink->Blink = Entry;
     LinkedList->Base.Flink = Entry;
+
+    LinkedList->Size++;
 
     return EXIT_STATUS_SUCCES;
 }
@@ -102,6 +107,8 @@ LinkedListRemoveEntry(
     next->Blink = prev;
     prev->Flink = next;
 
+    LinkedList->Size--;
+
     return EXIT_STATUS_SUCCES;
 }
 
@@ -123,6 +130,15 @@ LinkedListEntryIsCorrupted(
 {
     return Entry->Flink->Blink != Entry ||
            Entry->Blink->Flink != Entry;
+}
+
+_Use_decl_annotations_
+QWORD
+LinkedListGetSize(
+    _In_    PLINKED_LIST        LinkedList
+)
+{
+    return LinkedList->Size;
 }
 
 _Use_decl_annotations_

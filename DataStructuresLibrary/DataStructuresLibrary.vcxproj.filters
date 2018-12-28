@@ -22,6 +22,12 @@
     <Filter Include="Source Files\Linked List">
       <UniqueIdentifier>{5fc30895-c849-4b8d-acf6-75c73fe3286c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Queue">
+      <UniqueIdentifier>{0a4388f0-318c-4f78-9fab-997cc6bb9df5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Queue">
+      <UniqueIdentifier>{46e33b27-2e89-4fb0-887a-9c96127f9e40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -39,10 +45,22 @@
     <ClInclude Include="LinkedListEntry.h">
       <Filter>Header Files\Linked List</Filter>
     </ClInclude>
+    <ClInclude Include="Queue.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="data_structures_externals.h">
+      <Filter>Header Files\Definitions</Filter>
+    </ClInclude>
+    <ClInclude Include="data_structures_tags.h">
+      <Filter>Header Files\Definitions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkedList.c">
       <Filter>Source Files\Linked List</Filter>
+    </ClCompile>
+    <ClCompile Include="Queue.c">
+      <Filter>Source Files\Queue</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

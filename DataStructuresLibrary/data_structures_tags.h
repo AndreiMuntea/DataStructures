@@ -1,0 +1,7 @@
+#ifndef __DATA_STRUCTURES_TAGS_H__ 
+#define __DATA_STRUCTURES_TAGS_H__
+
+
+#define QUEUE_ELEMENT_CONTEXT_TAG       'CEQ#'    // #QEC
+
+#endif //__DATA_STRUCTURES_TAGS_H__

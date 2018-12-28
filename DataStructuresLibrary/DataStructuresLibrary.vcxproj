@@ -132,12 +132,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common_definitios.h" />
+    <ClInclude Include="data_structures_externals.h" />
     <ClInclude Include="data_structures_status.h" />
+    <ClInclude Include="data_structures_tags.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedListEntry.h" />
+    <ClInclude Include="Queue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkedList.c" />
+    <ClCompile Include="Queue.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

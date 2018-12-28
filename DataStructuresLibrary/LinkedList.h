@@ -8,6 +8,7 @@
 typedef struct _LINKED_LIST
 {
     LINKED_LIST_ENTRY Base;
+    QWORD Size;
 }LINKED_LIST, *PLINKED_LIST;
 
 VOID
@@ -63,6 +64,11 @@ LinkedListIsCorrupted(
 BOOL
 LinkedListEntryIsCorrupted(
     _In_    PLINKED_LIST_ENTRY  Entry
+);
+
+QWORD
+LinkedListGetSize(
+    _In_    PLINKED_LIST        LinkedLists
 );
 
 #endif //__LINKED_LIST_H__
