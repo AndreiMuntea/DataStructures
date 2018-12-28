@@ -1,6 +1,7 @@
 #include "ThreadPool.h"
 
 #define THREAD_POOL_DEFAULT_POLLING_TIME    5000
+#define THREAD_POOL_MAX_NO_THREADS          16
 
 _Use_decl_annotations_
 DS_STATUS
@@ -11,6 +12,11 @@ ThreadPoolInit(
     _In_    QUEUE_FREE_ROUTINE     PayloadCleanupRoutine
 )
 {
+    if (NoThreads > THREAD_POOL_MAX_NO_THREADS)
+    {
+        return EXIT_STATUS_NUMBER_OF_THREADS_EXCEDEED;
+    }
+
     HANDLE* threads = (HANDLE*)DS_Alloc(NoThreads * sizeof(HANDLE), THREAD_POOL_TAG);
     if (NULL == threads)
     {

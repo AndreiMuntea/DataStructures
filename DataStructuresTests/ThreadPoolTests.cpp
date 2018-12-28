@@ -66,14 +66,9 @@ namespace DataStructuresTests
             TestThreadPool(8, 50000);
         }
 
-        TEST_METHOD(ThreadPool16Threads500000ElementsBucketTest)
+        TEST_METHOD(ThreadPool16Threads50000ElementsBucketTest)
         {
-            TestThreadPool(16, 500000);
-        }
-        
-        TEST_METHOD(ThreadPool255Threads500000ElementsBucketTest)
-        {
-            TestThreadPool(255, 500000);
+            TestThreadPool(16, 50000);
         }
 
         void TestThreadPool(uint8_t NoThreads, size_t NoElements)

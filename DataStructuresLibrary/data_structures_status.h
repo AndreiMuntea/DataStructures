@@ -9,6 +9,7 @@ typedef long DS_STATUS;
 #define EXIT_STATUS_CORRUPTED_LIST                  ((DS_STATUS)(0x0003))
 #define EXIT_STATUS_CREATE_THREAD_FAILED            ((DS_STATUS)(0x0004))
 #define EXIT_STATUS_SHUTDOWN_PENDING                ((DS_STATUS)(0x0005))
+#define EXIT_STATUS_NUMBER_OF_THREADS_EXCEDEED      ((DS_STATUS)(0x0006))
 
 #define DS_STATUS_SUCCESS(status)       (status == EXIT_STATUS_SUCCES)
 
