@@ -3,6 +3,9 @@
 
 #include <sal.h>
 
+// for now
+#include <Windows.h>
+
 #include "data_structures_status.h"
 
 typedef unsigned __int8     BYTE,  *PBYTE;
