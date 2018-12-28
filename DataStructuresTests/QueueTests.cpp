@@ -7,11 +7,10 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace DataStructuresTests
-{
-
 #define QUEUE_ELMENT_TEST_TAG   'TEQ#'  //#QET
 
+namespace DataStructuresTests
+{
     typedef struct _QUEUE_ELEMENT_TEST
     {
         char* buffer;

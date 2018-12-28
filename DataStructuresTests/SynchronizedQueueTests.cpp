@@ -6,14 +6,12 @@
 #include "..\DataStructuresLibrary\SynchronizedQueue.c"
 
 #include <Windows.h>
-
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-
-namespace DataStructuresTests
-{
 
 #define QUEUE_ELMENT_TEST_TAG   'TEQ#'  //#QET
 
+namespace DataStructuresTests
+{
     VOID SynchronizedQueueFreeRoutine(PVOID Element)
     {
         UNREFERENCED_PARAMETER(Element);
@@ -171,15 +169,8 @@ namespace DataStructuresTests
             }
         }
 
-        void PushPopNFromXThreads(
-            PSYNCHRONIZED_QUEUE Queue,
-            unsigned int N,
-            unsigned int X,
-            volatile long long* Elements,
-            LPTHREAD_START_ROUTINE Routine
-        )
+        void PushPopNFromXThreads(PSYNCHRONIZED_QUEUE Queue, unsigned int N, unsigned int X, volatile long long* Elements, LPTHREAD_START_ROUTINE Routine)
         {
-
             PSYNCHRONIZED_QUEUE_THREAD_CONTEXT contexts = NULL;
             HANDLE* threads = NULL;
             bool shouldFail = true;
