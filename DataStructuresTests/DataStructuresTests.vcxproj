@@ -172,6 +172,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="LinkedListUnitTests.cpp" />
+    <ClCompile Include="SynchronizedQueueTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataStructuresLibrary\DataStructuresLibrary.vcxproj">

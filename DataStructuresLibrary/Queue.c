@@ -1,8 +1,5 @@
 #include "Queue.h"
 
-#include "data_structures_tags.h"
-#include "data_structures_externals.h"
-
 _Use_decl_annotations_
 VOID
 QueueInitialize(

@@ -3,6 +3,7 @@
 
 #include "Queue.h"
 
+
 typedef struct _SYNCHRONIZED_QUEUE
 {
     QUEUE               Queue;

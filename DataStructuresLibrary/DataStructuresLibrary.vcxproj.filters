@@ -54,12 +54,18 @@
     <ClInclude Include="data_structures_tags.h">
       <Filter>Header Files\Definitions</Filter>
     </ClInclude>
+    <ClInclude Include="SynchronizedQueue.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkedList.c">
       <Filter>Source Files\Linked List</Filter>
     </ClCompile>
     <ClCompile Include="Queue.c">
+      <Filter>Source Files\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="SynchronizedQueue.c">
       <Filter>Source Files\Queue</Filter>
     </ClCompile>
   </ItemGroup>
