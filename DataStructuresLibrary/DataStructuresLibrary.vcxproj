@@ -139,11 +139,13 @@
     <ClInclude Include="LinkedListEntry.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="SynchronizedQueue.h" />
+    <ClInclude Include="ThreadPool.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkedList.c" />
     <ClCompile Include="Queue.c" />
     <ClCompile Include="SynchronizedQueue.c" />
+    <ClCompile Include="ThreadPool.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,8 +1,8 @@
 #ifndef __SYNCHRONIZED_QUEUE_H__ 
 #define __SYNCHRONIZED_QUEUE_H__
 
+#include <Windows.h>
 #include "Queue.h"
-
 
 typedef struct _SYNCHRONIZED_QUEUE
 {

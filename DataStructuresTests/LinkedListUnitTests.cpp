@@ -202,6 +202,7 @@ namespace DataStructuresTests
 
             for (size_t i = 1; i < 499; ++i)
             {
+                Assert::IsNotNull(current); __analysis_assume(current != nullptr);
                 current = current->Flink;
 
                 Assert::IsTrue(&entries[i].Entry == current);
@@ -226,6 +227,7 @@ namespace DataStructuresTests
             LinkedListInitialize(&list);
 
             auto status = LinkedListInsertHead(&list, &entry1.Entry);
+            Assert::IsTrue(DS_STATUS_SUCCESS(status));
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
 
             Assert::IsTrue(entry1.Entry.Flink == &list.Base);
@@ -280,7 +282,9 @@ namespace DataStructuresTests
 
             for (size_t i = 498; i > 0; --i)
             {
+                Assert::IsNotNull(current); __analysis_assume(current != nullptr);
                 current = current->Flink;
+
                 Assert::IsTrue(entries[i].Entry.Blink == &entries[i + 1].Entry);
                 Assert::IsTrue(entries[i].Entry.Flink == &entries[i - 1].Entry);
             }

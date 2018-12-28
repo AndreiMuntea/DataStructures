@@ -173,6 +173,7 @@
     </ClCompile>
     <ClCompile Include="LinkedListUnitTests.cpp" />
     <ClCompile Include="SynchronizedQueueTests.cpp" />
+    <ClCompile Include="ThreadPoolTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataStructuresLibrary\DataStructuresLibrary.vcxproj">

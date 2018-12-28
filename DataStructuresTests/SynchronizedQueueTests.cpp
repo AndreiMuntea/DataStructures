@@ -155,12 +155,12 @@ namespace DataStructuresTests
                 threads[i] = CreateThread(nullptr, 0, Routine, &contexts[i], 0, nullptr);
                 if (!threads[i])
                 {
-                    WaitForMultipleObjects(i, &threads[0], TRUE, INFINITE);
+                    WaitForMultipleObjects(i, &threads[0], true, INFINITE);
                     Assert::Fail();
                 }
             }
 
-            WaitForMultipleObjects(NoThreads, &threads[0], TRUE, INFINITE);
+            WaitForMultipleObjects(NoThreads, &threads[0], true, INFINITE);
         }
     };
 }

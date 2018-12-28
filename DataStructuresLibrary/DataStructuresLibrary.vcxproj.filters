@@ -28,6 +28,12 @@
     <Filter Include="Source Files\Queue">
       <UniqueIdentifier>{46e33b27-2e89-4fb0-887a-9c96127f9e40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Thread Pool">
+      <UniqueIdentifier>{b0da5f6c-a726-4e5e-b91a-39c7970e3d77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Thread Pool">
+      <UniqueIdentifier>{70dd8740-f381-45d7-aaff-d4c70e1bef6a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -57,6 +63,9 @@
     <ClInclude Include="SynchronizedQueue.h">
       <Filter>Header Files\Queue</Filter>
     </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>Header Files\Thread Pool</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkedList.c">
@@ -67,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="SynchronizedQueue.c">
       <Filter>Source Files\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool.c">
+      <Filter>Source Files\Thread Pool</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
