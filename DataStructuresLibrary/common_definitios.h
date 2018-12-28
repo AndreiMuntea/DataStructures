@@ -41,4 +41,8 @@ typedef void                *PVOID;
 #define TRUE    1
 #endif
 
+#ifndef UNREFERENCED_PARAMETER
+#define UNREFERENCED_PARAMETER(x) ((void)(x))
+#endif
+
 #endif //__COMMON_DEFINITIONS_H__

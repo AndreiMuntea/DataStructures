@@ -19,7 +19,7 @@
     <Filter Include="Header Files\utils">
       <UniqueIdentifier>{7c5970d2-219e-4ed0-92c4-724d815bf780}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\LinkedListTests">
+    <Filter Include="Source Files\Data Structures Tests">
       <UniqueIdentifier>{44d3d350-7d2f-4438-90e0-08daecad94b5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -30,13 +30,22 @@
     <ClInclude Include="stdafx.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
+    <ClInclude Include="leaks_check.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files\utils</Filter>
     </ClCompile>
     <ClCompile Include="LinkedListUnitTests.cpp">
-      <Filter>Source Files\LinkedListTests</Filter>
+      <Filter>Source Files\Data Structures Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueTests.cpp">
+      <Filter>Source Files\Data Structures Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="data_structures_externals.cpp">
+      <Filter>Source Files\utils</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

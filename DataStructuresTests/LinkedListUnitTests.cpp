@@ -11,7 +11,7 @@ namespace DataStructuresTests
     typedef struct _LINKED_LIST_ENTRY_TEST
     {
         LINKED_LIST_ENTRY   Entry;
-        int                 Value;
+        size_t              Value;
     }LINKED_LIST_ENTRY_TEST, *PLINKED_LIST_ENTRY_TEST;
 
 	TEST_CLASS(LinkedListTests)

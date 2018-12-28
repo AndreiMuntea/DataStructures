@@ -33,6 +33,8 @@ QueueDestroy(
         Queue->QueueFreeRoutine((PVOID)(queueElementContext->Element));
         DS_Free(queueElementContext, QUEUE_ELEMENT_CONTEXT_TAG);
     }
+
+    Queue->QueueFreeRoutine = NULL;
 }
 
 _Use_decl_annotations_
@@ -45,7 +47,7 @@ QueuePush(
     DS_STATUS status = EXIT_STATUS_SUCCES;
     PQUEUE_CONTEXT element = NULL;
 
-    element = DS_Alloc(sizeof(QUEUE_CONTEXT), QUEUE_ELEMENT_CONTEXT_TAG);
+    element = (PQUEUE_CONTEXT)DS_Alloc(sizeof(QUEUE_CONTEXT), QUEUE_ELEMENT_CONTEXT_TAG);
     if (!element)
     {
         return EXIT_STATUS_NOT_ENOUGH_RESOURCES;
