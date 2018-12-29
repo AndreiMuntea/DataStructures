@@ -1,5 +1,5 @@
-#ifndef __COMMON_DEFINITIONS_H__ 
-#define __COMMON_DEFINITIONS_H__ 
+#ifndef __DATA_STRUCTURES_COMMON_DEFINITIONS_H__ 
+#define __DATA_STRUCTURES_COMMON_DEFINITIONS_H__ 
 
 #include <sal.h>
 
@@ -45,4 +45,4 @@ typedef void                *PVOID;
 #define UNREFERENCED_PARAMETER(x) ((void)(x))
 #endif
 
-#endif //__COMMON_DEFINITIONS_H__
+#endif //__DATA_STRUCTURES_COMMON_DEFINITIONS_H__

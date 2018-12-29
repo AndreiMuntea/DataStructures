@@ -306,7 +306,7 @@ namespace DataStructuresTests
             LinkedListInitialize(&list);
 
             auto status = LinkedListRemoveTail(&list, &entry);
-            Assert::IsTrue(status == EXIT_STATUS_NO_ELEMENTS_IN_LIST);
+            Assert::IsTrue(status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST);
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
         }
 
@@ -328,7 +328,7 @@ namespace DataStructuresTests
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
 
             status = LinkedListRemoveTail(&list, &entry);
-            Assert::IsTrue(status == EXIT_STATUS_NO_ELEMENTS_IN_LIST);
+            Assert::IsTrue(status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST);
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
         }
 
@@ -360,7 +360,7 @@ namespace DataStructuresTests
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
 
             status = LinkedListRemoveTail(&list, &entry);
-            Assert::IsTrue(status == EXIT_STATUS_NO_ELEMENTS_IN_LIST);
+            Assert::IsTrue(status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST);
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
         }
 
@@ -392,7 +392,7 @@ namespace DataStructuresTests
             }
 
             auto status = LinkedListRemoveTail(&list, &entry);
-            Assert::IsTrue(status == EXIT_STATUS_NO_ELEMENTS_IN_LIST);
+            Assert::IsTrue(status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST);
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
         }
 
@@ -404,7 +404,7 @@ namespace DataStructuresTests
             LinkedListInitialize(&list);
 
             auto status = LinkedListRemoveHead(&list, &entry);
-            Assert::IsTrue(status == EXIT_STATUS_NO_ELEMENTS_IN_LIST);
+            Assert::IsTrue(status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST);
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
         }
 
@@ -425,7 +425,7 @@ namespace DataStructuresTests
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
 
             status = LinkedListRemoveHead(&list, &entry);
-            Assert::IsTrue(status == EXIT_STATUS_NO_ELEMENTS_IN_LIST);
+            Assert::IsTrue(status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST);
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
         }
 
@@ -457,7 +457,7 @@ namespace DataStructuresTests
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
 
             status = LinkedListRemoveHead(&list, &entry);
-            Assert::IsTrue(status == EXIT_STATUS_NO_ELEMENTS_IN_LIST);
+            Assert::IsTrue(status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST);
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
         }
 
@@ -489,7 +489,7 @@ namespace DataStructuresTests
             }
 
             auto status = LinkedListRemoveHead(&list, &entry);
-            Assert::IsTrue(status == EXIT_STATUS_NO_ELEMENTS_IN_LIST);
+            Assert::IsTrue(status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST);
             Assert::IsFalse(TRUE == LinkedListIsCorrupted(&list));
         }
 	};

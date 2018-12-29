@@ -1,7 +1,7 @@
 #ifndef __REFCOUNTER_H__ 
 #define __REFCOUNTER_H__
 
-#include "common_definitios.h"
+#include "data_structures_common_definitios.h"
 
 typedef VOID(*REFCOUNTER_FREE_ROUTINE)(PVOID Element);
 

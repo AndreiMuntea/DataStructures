@@ -45,9 +45,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="common_definitios.h">
-      <Filter>Header Files\Definitions</Filter>
-    </ClInclude>
     <ClInclude Include="data_structures_status.h">
       <Filter>Header Files\Definitions</Filter>
     </ClInclude>
@@ -74,6 +71,9 @@
     </ClInclude>
     <ClInclude Include="Refcounter.h">
       <Filter>Header Files\Refcounter</Filter>
+    </ClInclude>
+    <ClInclude Include="data_structures_common_definitios.h">
+      <Filter>Header Files\Definitions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

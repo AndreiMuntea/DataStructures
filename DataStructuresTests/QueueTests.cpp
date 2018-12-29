@@ -103,7 +103,7 @@ namespace DataStructuresTests
 
             PQUEUE_ELEMENT_TEST element = NULL;
             DS_STATUS status = QueuePop(&queue, (PVOID*)(&element));
-            Assert::IsTrue(status == EXIT_STATUS_NO_ELEMENTS_IN_LIST);
+            Assert::IsTrue(status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST);
 
             QueueDestroy(&queue);
             Assert::IsTrue(queue.QueueFreeRoutine == NULL);

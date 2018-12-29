@@ -14,13 +14,13 @@ ThreadPoolInit(
 {
     if (NoThreads > THREAD_POOL_MAX_NO_THREADS)
     {
-        return EXIT_STATUS_NUMBER_OF_THREADS_EXCEDEED;
+        return DS_EXIT_STATUS_NUMBER_OF_THREADS_EXCEDEED;
     }
 
     HANDLE* threads = (HANDLE*)DS_Alloc(NoThreads * sizeof(HANDLE), THREAD_POOL_TAG);
     if (NULL == threads)
     {
-        return EXIT_STATUS_NOT_ENOUGH_RESOURCES;
+        return DS_EXIT_STATUS_NOT_ENOUGH_RESOURCES;
     }
     Ds_ZeroMemory(threads, NoThreads * sizeof(HANDLE));
 
@@ -39,11 +39,11 @@ ThreadPoolInit(
             ThreadPool->IsShutdownPending = TRUE;
             WaitForMultipleObjects(i, threads, TRUE, INFINITE);
             DS_Free(threads, THREAD_POOL_TAG);
-            return EXIT_STATUS_CREATE_THREAD_FAILED;
+            return DS_EXIT_STATUS_CREATE_THREAD_FAILED;
         }
     }
 
-    return EXIT_STATUS_SUCCES;
+    return DS_EXIT_STATUS_SUCCES;
 }
 
 _Use_decl_annotations_
@@ -69,7 +69,7 @@ ThreadPoolEnqueue(
 {
     if (ThreadPool->IsShutdownPending)
     {
-        return EXIT_STATUS_SHUTDOWN_PENDING;
+        return DS_EXIT_STATUS_SHUTDOWN_PENDING;
     }
 
     return SynchronizedQueuePush(&ThreadPool->Payloads, Payload);
@@ -83,12 +83,12 @@ ThreadPooolWorker(
 {
     PTHREAD_POOL threadPool = (PTHREAD_POOL)(Context);
     PVOID payload = NULL;
-    DS_STATUS status = EXIT_STATUS_SUCCES;
+    DS_STATUS status = DS_EXIT_STATUS_SUCCES;
 
     while (!(threadPool->IsShutdownPending && SynchronizedQueueIsEmpty(&threadPool->Payloads)))
     {
         status = SynchronizedQueuePop(&threadPool->Payloads, &payload);
-        if (status == EXIT_STATUS_NO_ELEMENTS_IN_LIST)
+        if (status == DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST)
         {
             Sleep(THREAD_POOL_DEFAULT_POLLING_TIME);
             continue;
@@ -103,5 +103,5 @@ ThreadPooolWorker(
         threadPool->Payloads.Queue.QueueFreeRoutine(payload);
     }
 
-    return EXIT_STATUS_SUCCES;
+    return DS_EXIT_STATUS_SUCCES;
 }

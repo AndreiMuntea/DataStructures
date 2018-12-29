@@ -30,7 +30,7 @@ SynchronizedQueuePush(
     _In_    PVOID               Element
 )
 {
-    DS_STATUS status = EXIT_STATUS_SUCCES;
+    DS_STATUS status = DS_EXIT_STATUS_SUCCES;
 
     EnterCriticalSection(&SynchronizedQueue->CriticalSection);
     status = QueuePush(&SynchronizedQueue->Queue, Element);
@@ -46,7 +46,7 @@ SynchronizedQueuePop(
     _Out_   PVOID*              Element
 )
 {
-    DS_STATUS status = EXIT_STATUS_SUCCES;
+    DS_STATUS status = DS_EXIT_STATUS_SUCCES;
 
     EnterCriticalSection(&SynchronizedQueue->CriticalSection);
     status = QueuePop(&SynchronizedQueue->Queue, Element);

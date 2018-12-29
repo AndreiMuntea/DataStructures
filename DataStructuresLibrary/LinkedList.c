@@ -20,7 +20,7 @@ LinkedListInsertTail(
 {
     if (LinkedListIsCorrupted(LinkedList))
     {
-        return EXIT_STATUS_CORRUPTED_LIST;
+        return DS_EXIT_STATUS_CORRUPTED_LIST;
     }
 
     Entry->Blink = LinkedList->Base.Blink;
@@ -31,7 +31,7 @@ LinkedListInsertTail(
     
     LinkedList->Size++;
 
-    return EXIT_STATUS_SUCCES;
+    return DS_EXIT_STATUS_SUCCES;
 }
 
 _Use_decl_annotations_
@@ -43,7 +43,7 @@ LinkedListInsertHead(
 {
     if (LinkedListIsCorrupted(LinkedList))
     {
-        return EXIT_STATUS_CORRUPTED_LIST;
+        return DS_EXIT_STATUS_CORRUPTED_LIST;
     }
 
     Entry->Flink = LinkedList->Base.Flink;
@@ -54,7 +54,7 @@ LinkedListInsertHead(
 
     LinkedList->Size++;
 
-    return EXIT_STATUS_SUCCES;
+    return DS_EXIT_STATUS_SUCCES;
 }
 
 _Use_decl_annotations_
@@ -88,17 +88,17 @@ LinkedListRemoveEntry(
 {
     if (LinkedListIsCorrupted(LinkedList))
     {
-        return EXIT_STATUS_CORRUPTED_LIST;
+        return DS_EXIT_STATUS_CORRUPTED_LIST;
     }
 
     if (LinkedListEntryIsCorrupted(Entry))
     {
-        return EXIT_STATUS_CORRUPTED_LIST;
+        return DS_EXIT_STATUS_CORRUPTED_LIST;
     }
 
     if (LinkedListIsEmpty(LinkedList))
     {
-        return EXIT_STATUS_NO_ELEMENTS_IN_LIST;
+        return DS_EXIT_STATUS_NO_ELEMENTS_IN_LIST;
     }
 
     PLINKED_LIST_ENTRY next = Entry->Flink;
@@ -109,7 +109,7 @@ LinkedListRemoveEntry(
 
     LinkedList->Size--;
 
-    return EXIT_STATUS_SUCCES;
+    return DS_EXIT_STATUS_SUCCES;
 }
 
 _Use_decl_annotations_

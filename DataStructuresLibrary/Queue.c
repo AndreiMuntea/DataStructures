@@ -19,7 +19,7 @@ QueueDestroy(
 {
     PLINKED_LIST_ENTRY element = NULL;
     PQUEUE_CONTEXT queueElementContext = NULL;
-    DS_STATUS status = EXIT_STATUS_SUCCES;
+    DS_STATUS status = DS_EXIT_STATUS_SUCCES;
 
     while (!LinkedListIsEmpty(&Queue->ElementsList))
     {
@@ -41,13 +41,13 @@ QueuePush(
     _In_    PVOID  Element
 )
 {
-    DS_STATUS status = EXIT_STATUS_SUCCES;
+    DS_STATUS status = DS_EXIT_STATUS_SUCCES;
     PQUEUE_CONTEXT element = NULL;
 
     element = (PQUEUE_CONTEXT)DS_Alloc(sizeof(QUEUE_CONTEXT), QUEUE_ELEMENT_CONTEXT_TAG);
     if (!element)
     {
-        return EXIT_STATUS_NOT_ENOUGH_RESOURCES;
+        return DS_EXIT_STATUS_NOT_ENOUGH_RESOURCES;
     }
     
     Ds_ZeroMemory(element, sizeof(QUEUE_CONTEXT));
@@ -71,7 +71,7 @@ QueuePop(
 {
     PQUEUE_CONTEXT element = NULL;
     PLINKED_LIST_ENTRY listEntry;
-    DS_STATUS status = EXIT_STATUS_SUCCES;
+    DS_STATUS status = DS_EXIT_STATUS_SUCCES;
 
     *Element = NULL;
 
@@ -85,7 +85,7 @@ QueuePop(
     *Element = element->Element;
     DS_Free(element, QUEUE_ELEMENT_CONTEXT_TAG);
 
-    return EXIT_STATUS_SUCCES;
+    return DS_EXIT_STATUS_SUCCES;
 }
 
 _Use_decl_annotations_

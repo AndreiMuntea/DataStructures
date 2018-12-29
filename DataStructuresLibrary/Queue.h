@@ -1,7 +1,7 @@
 #ifndef __QUEUE_H__
 #define __QUEUE_H__
 
-#include "common_definitios.h"
+#include "data_structures_common_definitios.h"
 #include "data_structures_tags.h"
 #include "data_structures_externals.h"
 #include "LinkedList.h"
