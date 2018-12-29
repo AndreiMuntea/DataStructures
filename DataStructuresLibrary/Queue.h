@@ -46,4 +46,9 @@ QueuePop(
     _Out_   PVOID*  Element
 );
 
+BOOL
+QueueIsEmpty(
+    _In_ PQUEUE              Queue
+);
+
 #endif //__QUEUE_H__

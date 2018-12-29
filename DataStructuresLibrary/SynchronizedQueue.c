@@ -54,3 +54,18 @@ SynchronizedQueuePop(
 
     return status;
 }
+
+_Use_decl_annotations_
+BOOL
+SynchronizedQueueIsEmpty(
+    _In_ PSYNCHRONIZED_QUEUE SynchronizedQueue
+)
+{
+    BOOL result = FALSE;
+
+    EnterCriticalSection(&SynchronizedQueue->CriticalSection);
+    result = QueueIsEmpty(&SynchronizedQueue->Queue);
+    LeaveCriticalSection(&SynchronizedQueue->CriticalSection);
+
+    return result;
+}

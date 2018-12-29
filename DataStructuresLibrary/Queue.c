@@ -87,3 +87,12 @@ QueuePop(
 
     return EXIT_STATUS_SUCCES;
 }
+
+_Use_decl_annotations_
+BOOL
+QueueIsEmpty(
+    _In_ PQUEUE              Queue
+)
+{
+    return LinkedListIsEmpty(&Queue->ElementsList);
+}

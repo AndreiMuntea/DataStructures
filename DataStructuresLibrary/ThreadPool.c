@@ -85,7 +85,7 @@ ThreadPooolWorker(
     PVOID payload = NULL;
     DS_STATUS status = EXIT_STATUS_SUCCES;
 
-    while (!threadPool->IsShutdownPending)
+    while (!(threadPool->IsShutdownPending && SynchronizedQueueIsEmpty(&threadPool->Payloads)))
     {
         status = SynchronizedQueuePop(&threadPool->Payloads, &payload);
         if (status == EXIT_STATUS_NO_ELEMENTS_IN_LIST)
@@ -100,6 +100,7 @@ ThreadPooolWorker(
         }
 
         threadPool->Routine(payload);
+        threadPool->Payloads.Queue.QueueFreeRoutine(payload);
     }
 
     return EXIT_STATUS_SUCCES;

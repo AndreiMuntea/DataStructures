@@ -36,5 +36,9 @@ SynchronizedQueuePop(
     _Out_   PVOID*              Element
 );
 
+BOOL
+SynchronizedQueueIsEmpty(
+    _In_ PSYNCHRONIZED_QUEUE SynchronizedQueue
+);
 
 #endif //__SYNCHRONIZED_QUEUE_H__
