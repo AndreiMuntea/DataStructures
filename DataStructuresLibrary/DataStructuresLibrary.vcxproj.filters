@@ -34,6 +34,12 @@
     <Filter Include="Header Files\Thread Pool">
       <UniqueIdentifier>{70dd8740-f381-45d7-aaff-d4c70e1bef6a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Refcounter">
+      <UniqueIdentifier>{52f43c28-20da-41f8-b39f-65f74e688bf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Refcounter">
+      <UniqueIdentifier>{170d93a6-2229-460a-ac63-3c01ff7a39d5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -66,6 +72,9 @@
     <ClInclude Include="ThreadPool.h">
       <Filter>Header Files\Thread Pool</Filter>
     </ClInclude>
+    <ClInclude Include="Refcounter.h">
+      <Filter>Header Files\Refcounter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkedList.c">
@@ -79,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="ThreadPool.c">
       <Filter>Source Files\Thread Pool</Filter>
+    </ClCompile>
+    <ClCompile Include="Refcounter.c">
+      <Filter>Source Files\Refcounter</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
