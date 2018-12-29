@@ -49,7 +49,8 @@ namespace DataStructuresTests
             auto status = SynchronizedQueuePop(context->Queue, (PVOID*)&element);
             Assert::IsTrue(DS_STATUS_SUCCESS(status));
 
-            InterlockedIncrement64(&elements->at(*element));
+            size_t position = static_cast<size_t>(*element);
+            InterlockedIncrement64(&elements->at(position));
         }
         return 0;
     }
